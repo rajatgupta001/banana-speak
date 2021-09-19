@@ -22,7 +22,7 @@ function clickHandler()
 {
     fetch(translationalURL(txtInput.value))
     .then(response => response.json())
-    .then(json => console.log(json))
+    //.then(json => console.log(json))
     .then(json => {outputDiv.innerText = json.contents.translated})
     .catch(handlingError)
 }
