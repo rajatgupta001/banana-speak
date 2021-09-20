@@ -1,0 +1,51 @@
+From now on I'll write everyting in here as yesterday I wrote stuff in notepad and I don't know how but mote then half the stuff is lost. 
+So let's get started.
+
+vanillajs is the js running in browser,
+
+var txtInput = document.querySelector("#txt-input");
+var outputDiv = document.querySelector("#output");
+var btnTranslate = document.querySelector("#btn-translate");
+
+var url = "https://api.funtranslations.com/translate/dothraki.json";
+
+function urlGenerator(text)
+{
+    return url + "?text=" + text;
+}
+
+function handlingError()
+{
+    alert("server is down, please try after some time");
+}
+
+function clickHandler()
+{
+    fetch(urlGenerator(txtInput.value))
+    .then(response => response.json())
+    //.then(json => console.log(json))
+    .then(json => {outputDiv.innerText = json.contents.translated})
+    .catch(handlingError)
+}
+
+btnTranslate.addEventListener("click", clickHandler());
+
+
+first we are reprenting the required HTML element with js. Here, the whole HTML is considered as an document object and here we are running a query for selecting the id "txt-input" and equate it to the js variable txtInput. remember that the querySelector selects the very first element for the provided criteria.
+
+outputDiv.innerText: prints the text in the outputDiv.
+txtInput.value: gives value that is in the txtInput.
+
+btnTranslate.addEventListener("click", clickHandler());
+whenever we perform the click operation on btnTranslate the clickHandler() will be executed.
+what clickhandler() will do:
+it will fetch the provided url then converts the response in understandable json then we can print the response that came from the server. However, here we are providing the only udeful value that came from server to output box so that the converted text can be printed in this box. 
+
+.then(response => response.json())
+this is the short way to write a function
+afunction(response)
+{
+  return response.json()
+}
+
+since it is a function the parameter can be named anything we want.
