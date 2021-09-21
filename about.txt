@@ -65,3 +65,7 @@ This is called client server architecture in short. Client requests data, and or
 
 
 The call we are making is a GET call. It's used to get data from server We are using a mock API as the translation API is rate limited to 5 per hour.
+
+
+<button onclick="clickHandler()" id = "btn-translate">Translate</button>
+Note: your code ws not working without onclick.
