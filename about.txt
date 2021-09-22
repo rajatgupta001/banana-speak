@@ -69,3 +69,6 @@ The call we are making is a GET call. It's used to get data from server We are u
 
 <button onclick="clickHandler()" id = "btn-translate">Translate</button>
 Note: your code ws not working without onclick.
+
+
+you can use document.querySelectorAll(".notes") instead of querySelector but remember to use class (logic) and it will return an array.
