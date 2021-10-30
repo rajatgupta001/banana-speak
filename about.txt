@@ -38,7 +38,7 @@ Everything you do on a web page triggers an event. There are multiple events lik
 Good thing about these events is that you can plug your own callback or functionality in each of these and introduce custom behavior. Think of the animation shown when user starts scrolling.
 
 
-first we are reprenting the required HTML element with js. Here, the whole HTML is considered as an document object (DOM) and here we are running a query for selecting the id "txt-input" and equate it to the js variable txtInput. remember that the querySelector selects the very first element for the provided criteria.
+first we are reprenting the required HTML element with js. Here, the whole HTML is considered as an document object (DOM) and here we are running a query for selecting the id "txt-input" and equate it to the js variable txtInput. remember that the querySelector selects the very first element for the provided criteria. We can use querySelectorAll if we want to select all elements having a specific class then we can access these individual elements as a list.
 
 outputDiv.innerText: prints the text in the outputDiv.
 txtInput.value: gives value that is in the txtInput.
@@ -46,7 +46,7 @@ txtInput.value: gives value that is in the txtInput.
 btnTranslate.addEventListener("click", clickHandler());
 whenever we perform the click operation on btnTranslate the clickHandler() will be executed.
 what clickhandler() will do:
-Fetch is built in all modern browsers and can be used to talk the servers. it will fetch the provided url then converts the response in understandable json then we can print the response that came from the server. However, here we are providing the only udeful value that came from server to output box so that the converted text can be printed in this box. 
+Fetch is built in all modern browsers and can be used to talk the servers. it will fetch the provided url then converts the response in understandable json then we can print the response that came from the server. However, here we are providing the only useful value that came from server to output box so that the converted text can be printed in this box. 
 
 .then(response => response.json())
 this is the short way to write a function
